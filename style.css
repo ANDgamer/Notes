@@ -2,13 +2,14 @@
 	--main: #22272e;
 	--header: #161b22;
 	--border: #545c65;
+	--black-filter: invert(1);
 }
-
 
 body {
 	margin: 0;
 	padding: 0;
 	background-color: var(--main);
+	font-family: 'Quicksand', sans-serif;
 }
 
 .header {
@@ -16,4 +17,18 @@ body {
 	height: 60px;
 	background-color: var(--header);
 	border-bottom: 1px solid var(--border);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-logo {
+	filter: var(--black-filter);
+}
+
+.menu-icon, .cloud-icon {
+	height: 50px;
+	cursor: pointer;
+	margin: 0 5px;
+	filter: var(--black-filter);
 }
