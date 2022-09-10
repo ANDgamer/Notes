@@ -2,7 +2,36 @@
 	--main: #22272e;
 	--header: #161b22;
 	--border: #545c65;
-	--black-filter: invert(1);
+	--theme-filter: invert(0.95);
+}
+
+*,
+*:after,
+*:before {
+	padding: 0;
+	margin: 0;
+	-webkit-tap-highlight-color: #00000000;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow-x: hidden
+}
+
+button {
+	cursor: pointer;
+	user-select: none;
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	display: flex;
+
+}
+
+button:active{
+	transform: scale(0.9);
 }
 
 body {
@@ -23,12 +52,33 @@ body {
 }
 
 .main-logo {
-	filter: var(--black-filter);
+	filter: var(--theme-filter);
 }
 
 .menu-icon, .cloud-icon {
 	height: 50px;
-	cursor: pointer;
 	margin: 0 5px;
-	filter: var(--black-filter);
+	filter: var(--theme-filter);
+}
+
+.sidebar{
+	height: calc(100% - 61px);
+	width: 50vw;
+	background-color: white;
+	position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.current-note {
+	width: 100%;
 }
