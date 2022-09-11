@@ -11,34 +11,18 @@
 	<title>Notes</title>
 </head>
 <body>
-	<div class="header">
-		<button onclick="w3_open()"><img class="menu-icon" src="images/list.svg"></button>
+	<header>
+		<button onclick="SidebarBut()"><img class="menu-icon" src="images/list.svg"></button>
 		<h1 class="main-logo">AndNotes</h1>
 		<button><img class="cloud-icon" src="images/cloud-arrow-up.svg"></button>
+	</header>
+	<div class="sidebar" id="mySidebar" style="margin-left: calc(var(--sidebar-width) * -1)">
+		<h2>Saved</h2>
 	</div>
-	<div class="sidebar" id="mySidebar" style="display:none">
-		
-	</div>
+	<section onclick="sidebarCl()">
+		<div class="test"></div>
+	</section>
 
-
-
-
-	<div .current-note></div>
-
-<script>
-
-	const SbDisplay = document.getElementById("mySidebar");
-
-	function w3_open() {
-	if (SbDisplay.style.display == "none") {
-		SbDisplay.style.display = "block";
-	} 
-	else {
-		SbDisplay.style.display = "none";
-	}
-	}
-
-</script>
-
+	<script src="main.js"></script>
 </body>
 </html>
