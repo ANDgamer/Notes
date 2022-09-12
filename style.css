@@ -81,7 +81,7 @@ header {
 
 /*---------- sidebar ----------*/
 
-.sidebar {
+.sidebar, .sidenebar {
 	height: calc(100% - 61px);
 	width: var(--sidebar-width);
 	background-color: var(--header);
@@ -89,7 +89,7 @@ header {
 	text-align: center;
 }
 
-.sidebar h2 {
+.sidebar h2, .sidenebar h2{
 	margin-top: 10px;
 }
 
@@ -162,4 +162,40 @@ section {
    body {
       height: calc(100vh - 56px);
    }
+}
+
+/*---------- test ----------*/
+
+.sidenebar{
+	right: 0;
+}
+
+.sidenebar.open {
+	animation: SidenebarSwitchOn 0.2s ease-out;
+	animation-fill-mode: forwards;
+}
+
+.sidenebar.close {
+	animation: SidenebarSwitchOff 0.2s ease-in;
+	animation-fill-mode: forwards;
+}
+
+@keyframes SidenebarSwitchOn {
+	from {
+		margin-right: calc(var(--sidebar-width) * -1);
+	}
+
+	to {
+		margin-right: 0;
+	}
+}
+
+@keyframes SidenebarSwitchOff {
+	from {
+		margin-right: 0;
+	}
+
+	to {
+		margin-right: calc(var(--sidebar-width) * -1);
+	}
 }
