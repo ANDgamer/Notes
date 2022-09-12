@@ -15,7 +15,7 @@ function SidebarBut() {
 	}
 }
 
-function sidebarCl() {
+function SidebarCl() {
 	if (Sidebar.classList.contains("open")) {
 		Sidebar.classList.remove("open");
 		Sidebar.classList.add("close");
