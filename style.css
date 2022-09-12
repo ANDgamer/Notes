@@ -94,33 +94,13 @@ header {
 }
 
 .sidebar.open {
-	animation: SidebarSwitchOn 0.2s ease-out;
-	animation-fill-mode: forwards;
+	transition: 0.2s ease-out;
+	transform: translateX(var(--sidebar-width));
 }
 
 .sidebar.close {
-	animation: SidebarSwitchOff 0.2s ease-in;
-	animation-fill-mode: forwards;
-}
-
-@keyframes SidebarSwitchOn {
-	from {
-		margin-left: calc(var(--sidebar-width) * -1);
-	}
-
-	to {
-		margin-left: 0;
-	}
-}
-
-@keyframes SidebarSwitchOff {
-	from {
-		margin-left: 0;
-	}
-
-	to {
-		margin-left: calc(var(--sidebar-width) * -1);
-	}
+	transition: 0.2s ease-out;
+	transform: translateX(0);
 }
 
 /*---------- section ----------*/
