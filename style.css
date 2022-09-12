@@ -4,6 +4,7 @@
 	--border: #545c65;
 	--theme-filter: invert(0.95);
 	--sidebar-width: 30vw;
+	--text-color: #f2f2f2;
 }
 
 ::-webkit-scrollbar {
@@ -48,6 +49,7 @@ body {
 	padding: 0;
 	background-color: var(--main);
 	font-family: 'Quicksand', sans-serif;
+	color: var(--text-color);
 	min-height: 100vh;
 }
 
@@ -62,10 +64,6 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	user-select: none;
-}
-
-.main-logo {
-	filter: var(--theme-filter);
 }
 
 .menu-icon, .cloud-icon {
@@ -92,7 +90,6 @@ header {
 }
 
 .sidebar h2 {
-	filter: var(--theme-filter);
 	margin-top: 10px;
 }
 
