@@ -1,3 +1,5 @@
+// Sidebar:
+
 const Sidebar = document.getElementById("mySidebar");
 const Body = document.querySelectorAll("body");
 
@@ -23,8 +25,32 @@ function SidebarBut() {
 	}
 }
 
-function SidebarCl() {
+function SidebarForciblyClose() {
 	if (Sidebar.classList.contains("open")) {
 		SidebarClose ();
 	}
+}
+
+//Theme selector:
+
+const LightThemeButton = document.getElementById("LightModeButton");
+const NightThemeButton = document.getElementById("NightModeButton");
+const AutoThemeButton = document.getElementById("AutoModeButton");
+
+function LightModeSelect() {
+	LightThemeButton.classList.add("selected")
+	NightThemeButton.classList.remove("selected")
+	AutoThemeButton.classList.remove("selected")
+}
+
+function NightModeSelect() {
+	LightThemeButton.classList.remove("selected")
+	NightThemeButton.classList.add("selected")
+	AutoThemeButton.classList.remove("selected")
+}
+
+function AutoModeSelect() {
+	LightThemeButton.classList.remove("selected")
+	NightThemeButton.classList.remove("selected")
+	AutoThemeButton.classList.add("selected")
 }

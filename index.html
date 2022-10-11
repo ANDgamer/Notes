@@ -12,14 +12,29 @@
 </head>
 <body>
 	<header>
-		<button onclick="SidebarBut()"><img class="menu-icon" src="images/list.svg"></button>
+		<button onclick="SidebarBut()"><img class="MenuIcon" src="images/list.svg"></button>
 		<h1 class="main-logo">AndNotes</h1>
-		<button><img class="cloud-icon" src="images/cloud-arrow-up.svg"></button>
+		<button><img class="PlusIcon" src="images/add.svg"></button>
 	</header>
+
 	<div class="sidebar" id="mySidebar" style="margin-left: calc(var(--sidebar-width) * -1)">
-		<h2>Saved</h2>
+
+		<div class="SavedNotes">
+			<h1>Saved:</h1>
+			<div class="SavedNotes__list">
+				<div class="SavedNotes__item"><h3>• Note 1</h3></div>
+			</div>
+		</div>
+
+		<div class="ThemeSelector">
+			<button class="" id="LightModeButton" onclick="LightModeSelect()"><img src="images/light_mode.svg"></button>
+			<button class="" id="NightModeButton" onclick="NightModeSelect()"><img src="images/night_mode.svg"></button>
+			<button class="selected" id="AutoModeButton" onclick="AutoModeSelect()"><img src="images/auto_mode.svg"></button>
+		</div>
+
 	</div>
-	<section onclick="SidebarCl()">
+
+	<section onclick="SidebarForciblyClose()">
 		<div class="test"></div>
 	</section>
 
