@@ -1,4 +1,4 @@
-root{
+:root{
 	--sidebar-width: 30vw;
 }
 
@@ -207,7 +207,7 @@ section {
 	}
 }
 
-@media (max-width: 440px) {
+@media (max-width: 360px) {
 	:root {
 	--sidebar-width: 80vw;
 	}
