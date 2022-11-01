@@ -215,10 +215,10 @@ section {
 
 @media (max-width: 500px) {
    section {
-      height: calc(100vh - 61px - 56px);
+      height: calc(100vh - 61px - 60px);
    }
    
-   body {
-      height: calc(100vh - 56px);
+   html, body {
+      height: calc(100vh - 60px);
    }
 }
