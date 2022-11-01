@@ -1,9 +1,12 @@
+root{
+	--sidebar-width: 30vw;
+}
+
 html.LightMode {
 	--main: #fafafa;
 	--header: #aaa;
 	--border: #222;
 	--theme-filter: invert(0);
-	--sidebar-width: 30vw;
 	--text-color: #222;
 }
 
@@ -12,12 +15,7 @@ html.NightMode {
 	--header: #161b22;
 	--border: #545c65;
 	--theme-filter: invert(0.95);
-	--sidebar-width: 30vw;
 	--text-color: #f2f2f2;
-}
-
-html.AutoMode {
-	--sidebar-width: 30vw;
 }
 
 @media (prefers-color-scheme: light) {
@@ -26,7 +24,6 @@ html.AutoMode {
 		--header: #aaa;
 		--border: #222;
 		--theme-filter: invert(0);
-		--sidebar-width: 30vw;
 		--text-color: #222;
 	}
 }
@@ -37,7 +34,6 @@ html.AutoMode {
 		--header: #161b22;
 		--border: #545c65;
 		--theme-filter: invert(0.95);
-		--sidebar-width: 30vw;
 		--text-color: #f2f2f2;
 	}
 }
