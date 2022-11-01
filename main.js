@@ -36,21 +36,28 @@ function SidebarForciblyClose() {
 const LightThemeButton = document.getElementById("LightModeButton");
 const NightThemeButton = document.getElementById("NightModeButton");
 const AutoThemeButton = document.getElementById("AutoModeButton");
+const html = document.documentElement;
 
 function LightModeSelect() {
 	LightThemeButton.classList.add("selected")
 	NightThemeButton.classList.remove("selected")
 	AutoThemeButton.classList.remove("selected")
+
+	html.className = 'LightMode'
 }
 
 function NightModeSelect() {
 	LightThemeButton.classList.remove("selected")
 	NightThemeButton.classList.add("selected")
 	AutoThemeButton.classList.remove("selected")
+
+	html.className = 'NightMode'
 }
 
 function AutoModeSelect() {
 	LightThemeButton.classList.remove("selected")
 	NightThemeButton.classList.remove("selected")
 	AutoThemeButton.classList.add("selected")
+
+	html.className = 'AutoMode'
 }
