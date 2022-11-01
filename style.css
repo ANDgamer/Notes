@@ -96,6 +96,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	overflow: hidden;
 }
 
 .MenuIcon, .PlusIcon {
@@ -125,6 +126,7 @@ header {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+	overflow: hidden;
 }
 
 .sidebar h1, .sidebar h2 {
