@@ -8,16 +8,16 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/8cd7cc9d94.js" crossorigin="anonymous"></script>
 	<title>Notes</title>
 </head>
 <body>
 	<header>
-		<button onclick="SidebarBut()"><img class="MenuIcon" src="images/list.svg"></button>
-		<h1 class="main-logo">AndNotes</h1>
-		<button><img class="PlusIcon" src="images/add.svg"></button>
+		<button onclick="SidebarBut()"><i class="fa-solid fa-bars MenuIcon"></i></button>
+		<h1 style="margin-right: 30px;" class="main-logo">AndNotes</h1>
 	</header>
 
-	<div class="sidebar" id="mySidebar" style="margin-left: calc(var(--sidebar-width) * -1)">
+	<div class="sidebar" id="mySidebar" style="margin-left: calc(var(--sidebar-width) * -1 - 1px)">
 
 		<div class="SavedNotes">
 			<h1>Saved:</h1>
@@ -27,15 +27,16 @@
 		</div>
 
 		<div class="ThemeSelector">
-			<button class="" id="LightModeButton" onclick="LightModeSelect()"><img src="images/light_mode.svg"></button>
-			<button class="" id="NightModeButton" onclick="NightModeSelect()"><img src="images/night_mode.svg"></button>
-			<button class="selected" id="AutoModeButton" onclick="AutoModeSelect()"><img src="images/auto_mode.svg"></button>
+			<button class="" id="LightModeButton" onclick="LightModeSelect()"><i class="fa-solid fa-sun"></i></button>
+			<button class="" id="NightModeButton" onclick="NightModeSelect()"><i class="fa-solid fa-moon"></i></button>
+			<button class="selected" id="AutoModeButton" onclick="AutoModeSelect()"><i class="fa-solid fa-wand-sparkles"></i></button>
 		</div>
 
 	</div>
-
 	<section onclick="SidebarForciblyClose()">
-		<div class="test"></div>
+		<div class="test">
+			
+		</div>
 	</section>
 
 	<script src="main.js"></script>
