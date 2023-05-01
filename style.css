@@ -44,7 +44,7 @@ html.NightMode {
 }
 ::-webkit-scrollbar-thumb {
 	border-radius: 5px;
-	background-color: var(--text-color) ;
+	background-color: var(--header) ;
 }
 
 *,
