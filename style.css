@@ -20,11 +20,11 @@ html.NightMode {
 
 @media (prefers-color-scheme: light) {
 	html.AutoMode {
-		--main: #22272e;
-		--header: #161b22;
-		--border: #545c65;
-		--text-color: #f2f2f2;
-		--section-text-color: var(--text-color);
+		--main: #203059;
+		--header: #e3e5ea;
+		--border: #222;
+		--text-color: #203059;
+		--section-text-color: #e3e5ea;
 	}
 }
 
