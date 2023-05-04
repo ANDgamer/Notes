@@ -77,6 +77,11 @@ button:active {
 	transform: scale(0.9);
 }
 
+svg {
+	width: 100%;
+	height: 100%;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -98,10 +103,15 @@ header {
 	color: var(--text-color);
 }
 
-header i, .sidebar i {
-	font-size: 36px;
-	margin: calc(12px);
+header button, .sidebar button {
+	width: 50px;
+	height: 50px;
 	color: var(--text-color);
+}
+
+header button {
+	margin-left: 7px;
+	padding: 2;
 }
 
 /*---------- sidebar ----------*/
@@ -146,14 +156,15 @@ header i, .sidebar i {
 
 .ThemeSelector {
 	width: 100%;
-	height: 54px;
+	height: 50px;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	margin: 15px 0;
 }
 
 .ThemeSelector button {
-	padding: 10px;
+	padding: 7px;
 	border-radius: 10px;
 	border: 2px solid rgba(0, 0, 0, 0);
 	display: flex;
