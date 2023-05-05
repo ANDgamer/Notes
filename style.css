@@ -67,6 +67,7 @@ body {
 	width: 100%;
 	overflow: hidden;
 	user-select: none;
+	font-family: 'Nunito', sans-serif;
 }
 
 button {
@@ -90,7 +91,6 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: var(--main);
-	font-family: 'Quicksand', sans-serif;
 	height: 100vh;
 }
 
@@ -156,6 +156,10 @@ header button {
 	padding: 15px;
 }
 
+.SavedNotes .item {
+	font-style: italic;
+}
+
 /*---------- theme selector ----------*/
 
 .ThemeSelector {
@@ -196,29 +200,36 @@ header button {
 /*---------- section ----------*/
 
 section {
-	height: calc(100vh - 61px - 10px);
+	height: calc(100vh - 61px);
 	overflow-y: scroll !important;
 	color: var(--section-text-color);
-	padding: 10px 20px 0 20px;
+	font-style: italic;
 }
 
 .note {
-	width: 100%;
+	width: calc(100% - 60px);
+	margin: 10px 30px 20px 30px;
 }
 
 .note h1 {
 	text-align: center;
-	font-size: 1.8rem;
+	font-size: 2rem;
+}
+
+.note h2 {
+	word-wrap: break-word;
+	max-width: calc(100% - 30px);
 }
 
 .note input {
-	height: 18px;
-	width: 18px;
+	height: 20px;
+	width: 20px;
+	margin-top: 6px;
 }
 
 .note .item {
 	display: flex;
-	align-items: center;
+	align-items: start;
 	justify-content: start;
 	gap: 10px;
 }
@@ -249,7 +260,7 @@ section {
 
 @media (max-width: 500px) {
    section {
-      height: calc(100vh - 61px - 10px - 60px);
+      height: calc(100vh - 61px - 60px);
    }
    
    html, body {
