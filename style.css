@@ -9,7 +9,7 @@ html.LightMode {
 	--border-color: #222;
 	--text-color: #203059;
 	--section-text-color: #e3e5ea;
-	--scrollbar-color: var(--header);
+	--scrollbar-color: var(--header-color);
 }
 
 html.NightMode {
@@ -30,7 +30,7 @@ html.NightMode {
 		--border-color: #222;
 		--text-color: #203059;
 		--section-text-color: #e3e5ea;
-		--scrollbar-color: var(--header);
+		--scrollbar-color: var(--header-color);
 	}
 }
 
@@ -286,4 +286,8 @@ section {
    html, body {
       height: calc(100vh - 60px);
    }
+
+   .SavedNotes .item:hover {
+		transform: none !important;
+	}
 }
