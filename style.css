@@ -133,7 +133,7 @@ header button {
 	color: var(--text-color);
 }
 
-.sidebar h1, .sidebar h2 {
+.sidebar h1{
 	text-align: center;
 	margin-bottom: 15px;
 }
@@ -196,13 +196,35 @@ header button {
 /*---------- section ----------*/
 
 section {
-	height: calc(100vh - 61px);
+	height: calc(100vh - 61px - 10px);
 	overflow-y: scroll !important;
 	color: var(--section-text-color);
+	padding: 10px 20px 0 20px;
 }
 
-.test{
-	height: 1000px;
+.note {
+	width: 100%;
+}
+
+.note h1 {
+	text-align: center;
+	font-size: 1.8rem;
+}
+
+.note input {
+	height: 18px;
+	width: 18px;
+}
+
+.note .item {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	gap: 10px;
+}
+
+.note .item:nth-child(n + 2) {
+	margin-top: 5px;
 }
 
 /*---------- adaptation ----------*/
@@ -227,7 +249,7 @@ section {
 
 @media (max-width: 500px) {
    section {
-      height: calc(100vh - 61px - 60px);
+      height: calc(100vh - 61px - 10px - 60px);
    }
    
    html, body {
