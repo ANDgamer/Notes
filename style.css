@@ -3,18 +3,20 @@
 }
 
 html.LightMode {
-	--main: #203059;
-	--header: #e3e5ea;
-	--border: #222;
+	--main-color: #203059;
+	--header-color: #e3e5ea;
+	--sidebar-color: rgba(227, 229, 234, 0.8);
+	--border-color: #222;
 	--text-color: #203059;
 	--section-text-color: #e3e5ea;
 	--scrollbar-color: var(--header);
 }
 
 html.NightMode {
-	--main: #22272e;
-	--header: #161b22;
-	--border: #545c65;
+	--main-color: #22272e;
+	--header-color: #161b22;
+	--sidebar-color: rgba(22, 27, 34, 0.9);
+	--border-color: #545c65;
 	--text-color: #f2f2f2;
 	--section-text-color: var(--text-color);
 	--scrollbar-color: var(--text-color);
@@ -22,9 +24,10 @@ html.NightMode {
 
 @media (prefers-color-scheme: light) {
 	html.AutoMode {
-		--main: #203059;
-		--header: #e3e5ea;
-		--border: #222;
+		--main-color: #203059;
+		--header-color: #e3e5ea;
+		--sidebar-color: rgba(227, 229, 234, 0.8);
+		--border-color: #222;
 		--text-color: #203059;
 		--section-text-color: #e3e5ea;
 		--scrollbar-color: var(--header);
@@ -33,9 +36,10 @@ html.NightMode {
 
 @media (prefers-color-scheme: dark) {
 	html.AutoMode {
-		--main: #22272e;
-		--header: #161b22;
-		--border: #545c65;
+		--main-color: #22272e;
+		--header-color: #161b22;
+		--sidebar-color: rgba(22, 27, 34, 0.9);
+		--border-color: #545c65;
 		--text-color: #f2f2f2;
 		--section-text-color: var(--text-color);
 		--scrollbar-color: var(--text-color);
@@ -90,7 +94,7 @@ svg, svg path {
 body {
 	margin: 0;
 	padding: 0;
-	background-color: var(--main);
+	background-color: var(--main-color);
 	height: 100vh;
 }
 
@@ -99,12 +103,13 @@ body {
 header {
 	width: 100%;
 	height: 60px;
-	background-color: var(--header);
+	background-color: var(--header-color);
 	border-bottom: 2px solid var(--text-color);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	color: var(--text-color);
+	box-shadow: 0 -12px 25px black;
 }
 
 header button, .sidebar button {
@@ -123,7 +128,8 @@ header button {
 .sidebar {
 	height: calc(100% - 61px);
 	width: var(--sidebar-width);
-	background-color: var(--header);
+	background-color: var(--sidebar-color);
+	backdrop-filter: blur(10px);
 	position: absolute;
 	display: flex;
 	flex-direction: column;
@@ -131,11 +137,11 @@ header button {
 	justify-content: space-between;
 	backdrop-filter: blur(10px);
 	color: var(--text-color);
+	box-shadow: -10px 20px 20px black;
 }
 
 .sidebar h1{
 	text-align: center;
-	margin-bottom: 15px;
 }
 
 .sidebar.open {
@@ -151,13 +157,28 @@ header button {
 /*---------- saved notes ----------*/
 
 .SavedNotes {
-	width: calc(100% - 30px);
-	min-height: 1px;
-	padding: 15px;
+	width: calc(100% - 50px);
+	padding: 10px 25px;
 }
 
 .SavedNotes .item {
 	font-style: italic;
+	cursor: pointer;
+	transition: 0.2s;
+	padding: 4px 0 4px 10px;
+	border-radius: 5px;
+}
+
+.SavedNotes .item:hover {
+	transform: translateX(10px);
+}
+
+.SavedNotes .item.selected:hover {
+	transform: none;
+}
+
+.SavedNotes .item.selected {
+	border: 2px solid var(--text-color);
 }
 
 /*---------- theme selector ----------*/
@@ -180,13 +201,12 @@ header button {
 	align-items: center;
 }
 
-.ThemeSelector i {
-	filter: var(--theme-filter);
-	height: 32px;
-	width: 32px;
-	margin: 0;
-	font-size: 32px;
-	color: var(--text-color);
+.ThemeSelector button:hover svg {
+	transform: scale(1.05);
+}
+
+.ThemeSelector button.selected:hover svg {
+	transform: none;
 }
 
 .ThemeSelector .selected {
