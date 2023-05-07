@@ -5,7 +5,7 @@
 html.LightMode {
 	--main-color: #203059;
 	--header-color: #e3e5ea;
-	--sidebar-color: rgba(227, 229, 234, 0.8);
+	--sidebar-color: rgba(227, 229, 234, 0.75);
 	--border-color: #222;
 	--text-color: #203059;
 	--section-text-color: #e3e5ea;
@@ -26,7 +26,7 @@ html.NightMode {
 	html.AutoMode {
 		--main-color: #203059;
 		--header-color: #e3e5ea;
-		--sidebar-color: rgba(227, 229, 234, 0.8);
+		--sidebar-color: rgba(227, 229, 234, 0.7);
 		--border-color: #222;
 		--text-color: #203059;
 		--section-text-color: #e3e5ea;
@@ -96,6 +96,7 @@ body {
 	padding: 0;
 	background-color: var(--main-color);
 	height: 100vh;
+	transition: .2s ease-out;
 }
 
 /*---------- header ----------*/
@@ -110,6 +111,8 @@ header {
 	align-items: center;
 	color: var(--text-color);
 	box-shadow: 0 -12px 25px black;
+	transition: .2s ease-out;
+	background-color: var(--sidebar-color);
 }
 
 header button, .sidebar button {
@@ -128,16 +131,16 @@ header button {
 .sidebar {
 	height: calc(100% - 61px);
 	width: var(--sidebar-width);
-	background-color: var(--sidebar-color);
 	backdrop-filter: blur(10px);
+	background-color: var(--sidebar-color);
 	position: absolute;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	backdrop-filter: blur(10px);
 	color: var(--text-color);
 	box-shadow: -10px 20px 20px black;
+	transition: .2s ease-out;
 }
 
 .sidebar h1{
@@ -145,12 +148,10 @@ header button {
 }
 
 .sidebar.open {
-	transition: 0.2s ease-out;
 	transform: translateX(var(--sidebar-width));
 }
 
 .sidebar.close {
-	transition: 0.2s ease-out;
 	transform: translateX(0);
 }
 
@@ -167,6 +168,7 @@ header button {
 	transition: 0.2s;
 	padding: 4px 0 4px 10px;
 	border-radius: 5px;
+	margin-top: 4px;
 }
 
 .SavedNotes .item:hover {
@@ -237,6 +239,7 @@ section {
 }
 
 .note h2 {
+	font-size: 1.3rem;
 	word-wrap: break-word;
 	max-width: calc(100% - 30px);
 }
@@ -244,7 +247,8 @@ section {
 .note input {
 	height: 20px;
 	width: 20px;
-	margin-top: 6px;
+	margin-top: 4px;
+	transition: none;
 }
 
 .note .item {
@@ -262,25 +266,25 @@ section {
 
 @media (max-width: 1200px) {
 	:root {
-	--sidebar-width: 40vw;
+		--sidebar-width: 40vw;
 	}
 }
 
 @media (max-width: 800px) {
 	:root {
-	--sidebar-width: 60vw;
+		--sidebar-width: 60vw;
 	}
 }
 
 @media (max-width: 360px) {
 	:root {
-	--sidebar-width: 80vw;
+		--sidebar-width: 80vw;
 	}
 }
 
 @media (max-width: 500px) {
    section {
-      height: calc(100vh - 61px - 56px);
+      height: calc(100vh - 61px - 56px);c 
    }
    
    html, body {
