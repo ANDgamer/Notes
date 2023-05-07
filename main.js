@@ -2,15 +2,20 @@
 
 const Sidebar = document.getElementById("mySidebar");
 const Body = document.querySelectorAll("body");
+const SidebarShadow = document.getElementById("sidebarShadow")
 
 function SidebarOpen () {
 	Sidebar.classList.remove("close");
 	Sidebar.classList.add("open");
+	SidebarShadow.classList.remove("close");
+	SidebarShadow.classList.add("open");
 }
 
 function SidebarClose () {
 	Sidebar.classList.remove("open");
 	Sidebar.classList.add("close");
+	SidebarShadow.classList.remove("open");
+	SidebarShadow.classList.add("close");
 }
 
 function SidebarBut() {
