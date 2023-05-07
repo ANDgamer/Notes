@@ -228,8 +228,8 @@ section {
 }
 
 .note {
-	width: calc(100% - 60px);
-	margin: 5px 30px 20px 30px;
+	width: calc(100% - 50px);
+	margin: 5px 25px 20px 25px;
 }
 
 .note h1 {
@@ -246,7 +246,7 @@ section {
 .note input {
 	height: 20px;
 	width: 20px;
-	margin-top: 4px;
+	margin-top: 1px;
 	transition: none;
 }
 
