@@ -112,7 +112,6 @@ header {
 	color: var(--text-color);
 	box-shadow: 0 -12px 25px black;
 	transition: .2s ease-out;
-	background-color: var(--sidebar-color);
 }
 
 header button, .sidebar button {
