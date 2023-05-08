@@ -26,7 +26,7 @@ function SidebarBut() {
 		SidebarClose ();
 	}
 	else {
-		Sidebar.classList.add("open");
+		SidebarOpen();
 	}
 }
 
