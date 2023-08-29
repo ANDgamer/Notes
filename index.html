@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
+	<script defer src="main.js"></script>
 	<link rel="icon" type="image/svg" href="images/document-icon.svg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +21,7 @@
 	<div class="sidebarShadow close" id="sidebarShadow" onclick="SidebarForciblyClose()">
 	</div>
 	<div class="sidebar" id="mySidebar" style="margin-left: calc(var(--sidebar-width) * -1 - 1px)">
+
 		<div class="SavedNotes">
 			<h1>Saved:</h1>
 			<div class="list">
@@ -41,59 +43,26 @@
 	<section onclick="SidebarForciblyClose()">
 		<div class="note">
 			<h1>Покупки</h1>
-			<div class="list">
-				<div class="item">
-					<label>
-						<input type="checkbox">
-						<h2>Купити води</h2>
-					</label>
-				</div>
-				<div class="item">
-					<label>
-						<input type="checkbox">
-						<h2>Купити молоко</h2>
-					</label>
-				</div>
-				<div class="item">
-					<label>
-						<input type="checkbox">
-						<h2>Купити булочки</h2>
-					</label>
-				</div>
-				<div class="item">
-					<label>
-						<input type="checkbox">
-						<h2>Купити булочки</h2>
-					</label>
-				</div>
-				<div class="item">
-					<label>
-						<input type="checkbox">
-						<h2>Морозивоооооооооооооооооооооооооооооооо</h2>
-					</label>
-				</div>
-				<div class="item">
-					<label>
-						<input type="checkbox">
-						<h2>Ljkhfcuiwncuoabgncfiocgkchocртсщшдктрфшгщснітермтпщвікстпшуіствшіпмтвсдпукрспщумсрьсшщутісісьпкпмтвщгсьпшкгспшіуьпкс тшщгмьпсщьщзкуьщ зпіьсщшзьпщящсьмщзпяьщсрпкз пцужрс фцк жцсожпк мпжф укдфж мпк см кпжукз укс зжфум жпзуіомпуісжукспжом укзж моу кєуоспє</h2>
-					</label>
-				</div>
-				<div class="item">
-					<label>
-						<input type="checkbox">
-						<h2>Ljkhfcuiwncuoabgncfiocgkchocртсщшдктрфшгщснітермтпщвікстпшуіствшіпмтвсдпукрспщумсрьсшщутісісьпкпмтвщгсьпшкгспшіуьпкс тшщгмьпсщьщзкуьщ</h2>
-					</label>
-				</div>
-				<div class="item">
-					<label>
-						<input type="checkbox">
-						<h2>Ljkhfcuiwncuoabgncfiocgkchocртсщшдктрфшгщснітермтпщвікстпшуіствшіпмтвсдпукрспщумсрьсшщутісісьпкпмтвщгсьпшкгспшіуьпкс тшщгмьпсщьщзкуьщ зпіьсщшзьпщящсьмщзпяьщсрпкз пцужрс фцк жцсожпк мпжф укдфж мпк см кпжукз укс зжфум жпзуіомпуісжукспжом укзж моу кєуоспє</h2>
-					</label>
-				</div>
+			<div class="list" id="itemsList">
+
+				<template id="noteTemplate" display="none">
+					<div class="item">
+						<label>
+							<input type="checkbox">
+							<h2 class="noteText"> null </h2>
+							<button class="noteRemove"></button>
+						</label>
+					</div>
+				</template>
+				
 			</div>
 		</div>
 	</section>
 
-	<script src="main.js"></script>
+	<footer>
+		<textarea id="addNoteTextarea" placeholder="Enter note..."></textarea>
+		<button id="addNoteButton"><svg width="100" height="100" fill="currentColor" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" id="mainIconPathAttribute"></path> <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" id="mainIconPathAttribute"></path> </svg></button>
+	</footer>
+
 </body>
 </html>

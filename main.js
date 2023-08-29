@@ -66,3 +66,26 @@ function AutoModeSelect() {
 
 	html.className = 'AutoMode'
 }
+
+//Notes:
+
+const mainElem = document.getElementById('itemsList');
+const noteTemplateElem = document.getElementById('noteTemplate');
+const addNoteTextareaElem = document.getElementById('addNoteTextarea');
+const addNoteButtonElem = document.getElementById('addNoteButton');
+
+const addNote = () => {
+	if (addNoteTextareaElem.value.trim() === "") { return; }
+	const noteText = addNoteTextareaElem.value.trim();
+	const newNoteElem = renderNote(noteText);
+	addNoteTextareaElem.value = "";
+};
+
+const renderNote = (noteText) => {
+	const newNoteElem = noteTemplateElem.content.children[0].cloneNode(true);
+	newNoteElem.getElementsByClassName('noteText')[0].textContent = noteText;
+	mainElem.append(newNoteElem);
+	return newNoteElem;
+}
+
+addNoteButtonElem.onclick = addNote;
