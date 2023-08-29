@@ -342,8 +342,16 @@ footer svg {
       height: calc(100vh - 1px - 60px 60px - 56px);
    }
    
-   html{
+   html {
       height: calc(100vh - 56px);
+   }
+
+   body {
+   	height: calc(100vh - 56px);
+   }
+
+   section {
+   	height: calc(100vh - 1px - 60px - 60px - 56px);
    }
 
    .SavedNotes .item:hover {
