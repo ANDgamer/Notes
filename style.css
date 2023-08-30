@@ -249,6 +249,11 @@ section {
 	margin: 5px 25px 20px 25px;
 }
 
+.note .item {
+	border-bottom: 1px solid var(--section-text-color);
+	padding: 0 5px;
+}
+
 .note label {
 	display: flex;
 	align-items: start;
@@ -278,18 +283,25 @@ section {
 	cursor: pointer;
 }
 
-.note .item {
+.note .item label{
 	display: flex;
+	align-items: center;
 	gap: 10px;
+	padding: 5px 0;
+}
+
+.note .item:nth-child(n + 2) {
+	margin-top: 5px;
 }
 
 .note .item button {
 	height: 25px;
 	width: 25px;
+	margin-left: auto;
 }
 
-.note .item:nth-child(n + 2) {
-	margin-top: 10px;
+.note .item svg {
+	color: var(--section-text-color);
 }
 
 /*---------- footer ----------*/
